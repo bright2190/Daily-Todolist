@@ -17,9 +17,9 @@ const app = express();
 
 // View engine setup
 app.set('view engine', 'ejs');      //tell our App that ejs has beem install and ready to be used
-app.use(bodyParser.urlencoded({extended: true}, {async: true}));       //we are using body body parser because of the "app.post"
+app.use(bodyParser.urlencoded({extended: true}, {async: true}));       //we are using  body parser because of the "app.post"
 app.use(express.static("public"));      // this app.use allows the server pass in all the css files, images, boostrap files and other files into the servers to the web page for the user display
-app.use(express.json())         //with this we just intiallize "body-parser in our sever"
+app.use(express.json())         //with this we just intiallize "body-parser in our server"
 app.use(cors());
 
 
@@ -53,6 +53,7 @@ const item2 = new Item({
 const item3 = new Item({
     name: "South Africa"
 });
+
 
 const defaultItems = [item1, item2, item3];
 
